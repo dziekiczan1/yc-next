@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@theme inline {
+  --color-primary: #EE2B69;
+}
+
 @layer base {
   :root {
     --radius: 0.5rem;
@@ -49,7 +53,7 @@
   }
 
   .pink_container {
-    @apply w-full bg-white min-h-[530px] flex justify-center items-center flex-col py-10 px-6;
+    @apply w-full bg-primary min-h-[530px] flex justify-center items-center flex-col py-10 px-6;
   }
 
   .tag {
