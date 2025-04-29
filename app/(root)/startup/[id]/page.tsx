@@ -9,7 +9,6 @@ import Link from "next/link";
 import Image from "next/image";
 import markdownit from "markdown-it";
 import { Skeleton } from "@/components/ui/skeleton";
-import StartupCard, { StartupTypeCard } from "@/components/StartupCard";
 
 const md = markdownit();
 
