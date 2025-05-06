@@ -1,5 +1,6 @@
 "use client";
 
+import MDEditor from "@uiw/react-md-editor";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,7 @@ import { useState } from "react";
 
 const StartupForm = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [pitch, setPitch] = useState("");
   return (
     <form action={() => {}} className="startup-form">
       <div>
@@ -77,7 +79,7 @@ const StartupForm = () => {
         </label>
 
         <MDEditor
-          value={}
+          value={pitch}
           onChange={() => {}}
           id="pitch"
           preview="edit"
