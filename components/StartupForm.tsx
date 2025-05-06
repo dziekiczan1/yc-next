@@ -10,6 +10,7 @@ import { useState } from "react";
 const StartupForm = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [pitch, setPitch] = useState("");
+  const isPending = false;
   return (
     <form action={() => {}} className="startup-form">
       <div>
@@ -80,7 +81,7 @@ const StartupForm = () => {
 
         <MDEditor
           value={pitch}
-          onChange={() => {}}
+          onChange={(value) => setPitch(value as string)}
           id="pitch"
           preview="edit"
           height={300}
@@ -96,8 +97,12 @@ const StartupForm = () => {
         {errors.pitch && <p className="startup-form_error">{errors.pitch}</p>}
       </div>
 
-      <Button type="submit" className="startup-form_btn text-white">
-        Submit
+      <Button
+        type="submit"
+        className="startup-form_btn text-white"
+        disabled={isPending}
+      >
+        {isPending ? "Submitting..." : "Submit Your Pitch"}
         <Send className="size-6 ml-2" />
       </Button>
     </form>
