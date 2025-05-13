@@ -41,7 +41,7 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
         </div>
         <Link href={`/user/${author?._id}`}>
           <Image
-            src="https://ix-marketing.imgix.net/autocompress.png?auto=format,compress&w=1946"
+            src={author?.image!}
             alt={author?.name!}
             width={48}
             height={48}
